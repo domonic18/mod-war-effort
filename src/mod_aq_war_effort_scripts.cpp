@@ -884,7 +884,7 @@ void WarEffort::CheckGoal(Unit* unit, uint8 material, uint8 team)
         {
             if (Player* player = unit->ToPlayer())
             {
-                ChatHandler(player->GetSession()).SendSysMessage("All the required War Effort resources have been gathered. The expedition presses on to Silithus!");
+                ChatHandler(player->GetSession()).SendSysMessage("所有必需的战争资源都已经收集好了。探险队向希利苏斯进发!");
             }
 
             isComplete = true;
@@ -904,7 +904,16 @@ std::string WarEffort::PrintOutMaterialCount(uint8 team)
             {
                 if (ItemTemplate const* item = sObjectMgr->GetItemTemplate(quest->RequiredItemId[0]))
                 {
-                    output.append(item->Name1 + " (" + Acore::ToString(materialsAlliance[data.Material] * data.Multiplier) + ") Goal:" + Acore::ToString(data.Goal) + "\n");
+                    //output.append(item->Name1 + " (" + Acore::ToString(materialsAlliance[data.Material] * data.Multiplier) + ") Goal:" + Acore::ToString(data.Goal) + "\n");
+                    LocaleConstant locale = LOCALE_zhCN;
+                    std::string itemName = item->Name1;
+
+                    if (ItemLocale const* leftIl = sObjectMgr->GetItemLocale(item->ItemId))
+                    {
+                        ObjectMgr::GetLocaleString(leftIl->Name, locale, itemName);
+                    }
+
+                    output.append(itemName + " (" + Acore::ToString(materialsAlliance[data.Material] * data.Multiplier) + ") 目标:" + Acore::ToString(data.Goal) + "\n");
                 }
             }
         }
@@ -917,7 +926,16 @@ std::string WarEffort::PrintOutMaterialCount(uint8 team)
             {
                 if (ItemTemplate const* item = sObjectMgr->GetItemTemplate(quest->RequiredItemId[0]))
                 {
-                    output.append(item->Name1 + " (" + Acore::ToString(materialsHorde[data.Material] * data.Multiplier) + ") Goal:" + Acore::ToString(data.Goal) + "\n");
+                    //output.append(item->Name1 + " (" + Acore::ToString(materialsHorde[data.Material] * data.Multiplier) + ") Goal:" + Acore::ToString(data.Goal) + "\n");
+                    LocaleConstant locale = LOCALE_zhCN;
+                    std::string itemName = item->Name1;
+
+                    if (ItemLocale const* leftIl = sObjectMgr->GetItemLocale(item->ItemId))
+                    {
+                        ObjectMgr::GetLocaleString(leftIl->Name, locale, itemName);
+                    }
+
+                    output.append(itemName + " (" + Acore::ToString(materialsHorde[data.Material] * data.Multiplier) + ") 目标:" + Acore::ToString(data.Goal) + "\n");
                 }
             }
         }
@@ -966,10 +984,49 @@ public:
                 {
                     if (Creature* rajaxx = jon->SummonCreature(15341, -8192.917969, 1530.618652, 4.195582, 6.252320, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS))
                     {
-                        rajaxx->SetUnitFlag(UNIT_FLAG_IMMUNE_TO_NPC | UNIT_FLAG_IMMUNE_TO_PC | UNIT_FLAG_NON_ATTACKABLE);
+                        //rajaxx->SetUnitFlag(UNIT_FLAG_IMMUNE_TO_NPC | UNIT_FLAG_IMMUNE_TO_PC | UNIT_FLAG_NON_ATTACKABLE);
                         rajaxx->AI()->Talk(12);
                     }
+
                 }, 10s);
+
+                jon->m_Events.AddEventAtOffset([jon]()
+                {//第一波
+                    jon->SummonCreature(15290, -8082.261230, 1592.360352, 13.051420, 1.312783, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15290, -8088.135742, 1580.185181, 13.631886, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15290, -8066.951172, 1577.572876, 13.327731, 1.626940, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //respawn 阿兰齐斯 http://db.nfuwow.com/80/?npc=15290
+
+                    jon->SummonCreature(15758, -8068.039062, 1601.865479, 12.943519, 1.729357, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8075.193359, 1558.338989, 3.910745, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
+
+                }, 15s);
+
+                jon->m_Events.AddEventAtOffset([jon]()
+                {//第二波 
+
+                    jon->SummonCreature(15758, -8047.767578, 1533.441650, 2.865839, 2.256020, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8064.024902, 1479.398682, 2.610063, 2.108794, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
+
+                    jon->SummonCreature(15277, -8113.520508, 1504.297363, 3.497479, 0.164930, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15277, -8113.069824, 1545.446167, 4.109026, 6.016147, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //阿努比萨斯防御者 http://db.nfuwow.com/80/?npc=15277
+
+                }, 50s);
+
+                jon->m_Events.AddEventAtOffset([jon]()
+                {//第三波
+                    jon->SummonCreature(15818, -8135.741699, 1525.631958, 6.190957, 0.041307, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //respawn 诺克霍尔中将 http://db.nfuwow.com/80/?npc=15818
+
+                    jon->SummonCreature(15264, -8166.824707, 1534.911377, 4.194772, 0.127698, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15264, -8169.110352, 1516.041504, 5.087041, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //respawn 阿努比萨斯哨兵 http://db.nfuwow.com/80/?npc=15264
+
+
+                }, 70s);
             }
 
             return;
@@ -1046,7 +1103,7 @@ public:
         {
             _scheduler.CancelAll();
 
-            _scheduler.Schedule(1min, [this](TaskContext context)
+            _scheduler.Schedule(10min, [this](TaskContext context)
             {
                 if (sWarEffort->IsSaveNeeded())
                 {
@@ -1118,6 +1175,7 @@ WhisperData const whisperData[MAX_MATERIAL_CATS] =
         "Food, now there's a subject I can sink my fangs into! I am told that we have %u of %u lean wolf steaks, %u out of %u spotted yellowtail, and %u of %u baked salmon on ice and stored away."
     }
 };
+
 
 struct npc_mod_war_effort_quartermaster : public ScriptedAI
 {
