@@ -272,7 +272,9 @@ public:
 
     bool saveNeeded{ false };
     bool isComplete{ false };
-    bool gongBanged{ false };
+    //bool gongBanged{ false };
+    bool gongBanged{ sConfigMgr->GetOption<bool>("ModWarEffort.gongBanged", false)};
+    
 
     std::string PrintOutMaterialCount(uint8 team);
 
