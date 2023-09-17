@@ -80,3 +80,10 @@ ModWarEffort.Goal.Alliance.Leather.02 = 10
 ModWarEffort.Goal.Alliance.Leather.03 = 15
 ModWarEffort.Goal.Alliance.Leather.04 = 20
 ModWarEffort.Goal.Alliance.Leather.05 = 25
+
+#
+#    ModWarEffort.gongBanged
+#        Description: if set to 1, SummonCreature would be disable.
+#        Default:     0
+#
+ModWarEffort.gongBanged = 1
