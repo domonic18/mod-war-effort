@@ -1002,6 +1002,22 @@ public:
 
                     jon->SummonCreature(15758, -8068.039062, 1601.865479, 12.943519, 1.729357, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
                     jon->SummonCreature(15758, -8075.193359, 1558.338989, 3.910745, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -7991.5713, 1463.6854, -8.5194645, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -7975.211, 1433.1295, -1.0637463, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -7913.4, 1567.4911, -2.122051, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8053.676, 1699.926, 5.6564875, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8026.916, 1584.74, 13.87576, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8058.5356, 1606.2673, 13.134168, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8102.825, 1433.2421, 3.886019, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -7882.9907, 1445.4049, -7.0211916, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+
+                    jon->SummonCreature(15758, -7040.97, 965.4741, 3.7340686, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -7316.955, 988.6402, 2.2525709, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -7847.187, 1273.9124, -6.9995003, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -7928.253, 1380.2721, 3.2210107, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -7937.6543, 1529.2448, -0.31721765, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8089.367, 1512.9592, 3.3868742, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -6816.9536, 629.6734, 10.997707, 4.372214, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
                     //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
 
                 }, 15s);
@@ -1017,7 +1033,10 @@ public:
                     jon->SummonCreature(15277, -8113.069824, 1545.446167, 4.109026, 6.016147, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
                     //阿努比萨斯防御者 http://db.nfuwow.com/80/?npc=15277
 
-                }, 50s);
+                    jon->SummonCreature(15290, -8048.6323, 1530.1389, 2.6105433, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15290, -8082.054, 1538.1332, 2.6095955, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //respawn 阿兰齐斯 http://db.nfuwow.com/80/?npc=15290
+                }, 30s);
 
                 jon->m_Events.AddEventAtOffset([jon]()
                 {//第三波
@@ -1029,7 +1048,11 @@ public:
                     jon->SummonCreature(15758, -8072.542, 1531.9130, 2.6104224, 3.150922, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
                     //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
 
-                }, 70s);
+                    jon->SummonCreature(15290, -8068.662, 1476.6178, 2.6099055, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15290, -8153.512, 1525.0668, 4.255996, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //respawn 阿兰齐斯 http://db.nfuwow.com/80/?npc=15290
+
+                }, 50s);
 
 
                 jon->m_Events.AddEventAtOffset([jon]()
@@ -1042,15 +1065,18 @@ public:
                     jon->SummonCreature(15758, -8113.069824, 1545.446167, 4.109026, 6.016147, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
                     jon->SummonCreature(15758, -8047.767578, 1533.441650, 2.865839, 2.256020, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
                     jon->SummonCreature(15758, -8064.024902, 1479.398682, 2.610063, 2.108794, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
-                //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
+                    //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
 
-                }, 180s);
+                    jon->SummonCreature(15290, -8000.1064, 1548.648, 3.468579, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15290, -7964.65, 1500.7722, -4.080321, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //respawn 阿兰齐斯 http://db.nfuwow.com/80/?npc=15290
+                }, 100s);
 
                 jon->m_Events.AddEventAtOffset([jon]()
                 {//第五波
 
                     jon->SummonCreature(15758, -8169.110352, 1516.041504, 5.087041, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
-                    jon->SummonCreature(15758, -8169.110352, 1516.041504, 5.087041, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8168.856, 1533.0793, 5.087041, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
 
                     jon->SummonCreature(15758, -8225.757, 1601.8403, 2.6382682, 5.263625, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
                     jon->SummonCreature(15758, -8240.829, 1578.6632, 5.627161, 6.045085, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
@@ -1058,9 +1084,99 @@ public:
                     jon->SummonCreature(15758, -8270.441, 1597.0443, 9.892122, 5.825171, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
                     //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
 
+                    jon->SummonCreature(15290, -8171.5474, 1491.0076, 9.463425, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    jon->SummonCreature(15290, -8180.619, 1555.5083, 4.7621555, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    //respawn 阿兰齐斯 http://db.nfuwow.com/80/?npc=15290
+                }, 150s);
+
+
+                jon->m_Events.AddEventAtOffset([jon]()
+                {//第六波
+
+                    jon->SummonCreature(15758, -8068.371, 1573.8256, 11.206471, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8075.5273, 1469.73, 2.6101818, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+
+                    jon->SummonCreature(15758, -8052.033, 1606.6958, 14.044601, 5.263625, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8086.396, 1606.2362, 12.946826, 6.045085, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8104.939, 1553.8475, 4.236907, 5.326448, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8030.9644, 1477.0891, -6.0099645, 5.825171, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
+
+                    jon->SummonCreature(15290, -8062.2197, 1501.5511, 2.6095867, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    jon->SummonCreature(15290, -7970.751, 1505.1425, -1.9137354, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    //respawn 阿兰齐斯 http://db.nfuwow.com/80/?npc=15290
                 }, 300s);
 
+                jon->m_Events.AddEventAtOffset([jon]()
+                {//第七波
 
+                    jon->SummonCreature(15758, -8047.767578, 1533.441650, 2.865839, 2.256020, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8064.024902, 1479.398682, 2.610063, 2.108794, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
+
+                    jon->SummonCreature(15277, -8113.520508, 1504.297363, 3.497479, 0.164930, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15277, -8113.069824, 1545.446167, 4.109026, 6.016147, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //阿努比萨斯防御者 http://db.nfuwow.com/80/?npc=15277
+
+                    jon->SummonCreature(15290, -8048.6323, 1530.1389, 2.6105433, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15290, -8082.054, 1538.1332, 2.6095955, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //respawn 阿兰齐斯 http://db.nfuwow.com/80/?npc=15290
+                }, 500s);
+
+                jon->m_Events.AddEventAtOffset([jon]()
+                {//第八波
+
+                    jon->SummonCreature(15264, -8166.824707, 1534.911377, 4.194772, 0.127698, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15264, -8169.110352, 1516.041504, 5.087041, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //respawn 阿努比萨斯哨兵 http://db.nfuwow.com/80/?npc=15264
+
+                    jon->SummonCreature(15758, -8071.949, 1500.0402, 2.6101596, 2.982062, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8072.542, 1531.9130, 2.6104224, 3.150922, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
+
+                    jon->SummonCreature(15290, -8068.662, 1476.6178, 2.6099055, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15290, -8153.512, 1525.0668, 4.255996, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //respawn 阿兰齐斯 http://db.nfuwow.com/80/?npc=15290
+
+                }, 750s);
+
+                jon->m_Events.AddEventAtOffset([jon]()
+                {//第九波
+
+                    jon->SummonCreature(15758, -8169.110352, 1516.041504, 5.087041, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8168.856, 1533.0793, 5.087041, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+
+                    jon->SummonCreature(15758, -8225.757, 1601.8403, 2.6382682, 5.263625, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8240.829, 1578.6632, 5.627161, 6.045085, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8255.162, 1610.3248, 9.668867, 5.326448, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8270.441, 1597.0443, 9.892122, 5.825171, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
+
+                    jon->SummonCreature(15290, -8171.5474, 1491.0076, 9.463425, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    jon->SummonCreature(15290, -8180.619, 1555.5083, 4.7621555, 1.312784, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    //respawn 阿兰齐斯 http://db.nfuwow.com/80/?npc=15290
+                }, 1000s);
+
+                jon->m_Events.AddEventAtOffset([jon]()
+                {//第十波
+
+                    jon->SummonCreature(15758, -7931.804, 1538.8168, 0.010810117, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -7960.132, 1469.8634, -4.0313253, 0.064865, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+
+                    jon->SummonCreature(15758, -8288.848, 1665.5997, 25.288456, 5.263625, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8274.074, 1682.1119, 25.680027, 6.045085, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8332.609, 1716.1487, 26.199715, 5.326448, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8319.275, 1734.2783, 29.47475, 5.825171, TEMPSUMMON_TIMED_DESPAWN, HOUR * IN_MILLISECONDS);
+
+                    jon->SummonCreature(15758, -8394.224, 1829.3846, 78.06399, 5.825171, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8420.806, 1817.2188, 79.626434, 5.825171, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8349.523, 1856.047, 78.63214, 5.825171, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8357.244, 1878.8451, 78.513176, 5.825171, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8269.991, 1969.4395, 129.93886, 5.825171, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+                    jon->SummonCreature(15758, -8247.427, 1958.2705, 130.26935, 5.825171, TEMPSUMMON_TIMED_DESPAWN, HOUR* IN_MILLISECONDS);
+
+                    //超级阿努比萨斯战争使者 http://db.nfuwow.com/80/?npc=15758
+                }, 1250s);
             }
 
             return;
